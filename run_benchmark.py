@@ -8,3 +8,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from benchmark import run_all_benchmarks
+
+
+if __name__ == "__main__":
+    run_all_benchmarks(ROOT)
