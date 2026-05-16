@@ -10,3 +10,7 @@ class GraphSpec:
     graph_type: str
     n: int
     seed: int
+
+
+def _er_probability(n: int) -> float:
+    # Keep the graph sparse enough to run on a normal laptop.
