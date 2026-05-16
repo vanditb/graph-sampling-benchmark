@@ -16,3 +16,7 @@ def sample_random_edges(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
     rng = random.Random(seed)
     edges = list(graph.edges())
     target = max(1, int(round(len(edges) * rate)))
+    chosen = rng.sample(edges, min(target, len(edges)))
+    sampled = nx.Graph()
+    sampled.add_edges_from(chosen)
+    return sampled

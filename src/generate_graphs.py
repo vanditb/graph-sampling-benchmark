@@ -26,3 +26,7 @@ def generate_graph(spec: GraphSpec) -> nx.Graph:
     if spec.graph_type == "watts_strogatz":
         k = 6 if spec.n >= 1000 else 4
         return nx.watts_strogatz_graph(spec.n, k, 0.15, seed=spec.seed)
+    raise ValueError(f"Unknown graph type: {spec.graph_type}")
+
+
+def graph_specs() -> list[GraphSpec]:
