@@ -22,3 +22,7 @@ def generate_graph(spec: GraphSpec) -> nx.Graph:
         return nx.erdos_renyi_graph(spec.n, _er_probability(spec.n), seed=spec.seed)
     if spec.graph_type == "barabasi_albert":
         m = 4 if spec.n >= 1000 else 3
+        return nx.barabasi_albert_graph(spec.n, m, seed=spec.seed)
+    if spec.graph_type == "watts_strogatz":
+        k = 6 if spec.n >= 1000 else 4
+        return nx.watts_strogatz_graph(spec.n, k, 0.15, seed=spec.seed)

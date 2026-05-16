@@ -13,3 +13,6 @@ def sample_random_nodes(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
 
 
 def sample_random_edges(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
+    rng = random.Random(seed)
+    edges = list(graph.edges())
+    target = max(1, int(round(len(edges) * rate)))
