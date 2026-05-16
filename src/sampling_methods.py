@@ -20,3 +20,7 @@ def sample_random_edges(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
     sampled = nx.Graph()
     sampled.add_edges_from(chosen)
     return sampled
+
+
+def sample_random_walk(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
+    rng = random.Random(seed)

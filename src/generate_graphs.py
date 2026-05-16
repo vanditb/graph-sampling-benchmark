@@ -30,3 +30,7 @@ def generate_graph(spec: GraphSpec) -> nx.Graph:
 
 
 def graph_specs() -> list[GraphSpec]:
+    specs = []
+    graph_types = ["erdos_renyi", "barabasi_albert", "watts_strogatz"]
+    sizes = [1000, 3000, 5000]
+    base_seed = 1234
