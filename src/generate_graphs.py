@@ -18,3 +18,7 @@ def _er_probability(n: int) -> float:
 
 
 def generate_graph(spec: GraphSpec) -> nx.Graph:
+    if spec.graph_type == "erdos_renyi":
+        return nx.erdos_renyi_graph(spec.n, _er_probability(spec.n), seed=spec.seed)
+    if spec.graph_type == "barabasi_albert":
+        m = 4 if spec.n >= 1000 else 3
