@@ -14,3 +14,7 @@ class GraphSpec:
 
 def _er_probability(n: int) -> float:
     # Keep the graph sparse enough to run on a normal laptop.
+    return min(0.01, max(0.0015, 8 / max(n - 1, 1)))
+
+
+def generate_graph(spec: GraphSpec) -> nx.Graph:
