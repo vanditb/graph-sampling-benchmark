@@ -25,3 +25,8 @@ SAMPLE_RATES = [0.25, 0.50, 0.75]
 SAMPLERS = {
     "random_node": sample_random_nodes,
     "random_edge": sample_random_edges,
+    "random_walk": sample_random_walk,
+}
+
+
+def _pagerank(graph: nx.Graph) -> tuple[dict, float]:

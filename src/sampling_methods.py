@@ -31,3 +31,7 @@ def sample_random_walk(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
     target = max(2, int(round(graph.number_of_nodes() * rate)))
     start = rng.choice(nodes)
     visited = {start}
+    current = start
+    steps = 0
+    max_steps = max(target * 20, 100)
+
