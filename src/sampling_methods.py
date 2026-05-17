@@ -24,3 +24,7 @@ def sample_random_edges(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
 
 def sample_random_walk(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
     rng = random.Random(seed)
+    nodes = list(graph.nodes())
+    if not nodes:
+        return graph.copy()
+

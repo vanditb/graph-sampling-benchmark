@@ -34,3 +34,7 @@ def graph_specs() -> list[GraphSpec]:
     graph_types = ["erdos_renyi", "barabasi_albert", "watts_strogatz"]
     sizes = [1000, 3000, 5000]
     base_seed = 1234
+    for i, graph_type in enumerate(graph_types):
+        for j, n in enumerate(sizes):
+            specs.append(GraphSpec(graph_type=graph_type, n=n, seed=base_seed + i * 100 + j))
+    return specs
