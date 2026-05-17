@@ -39,3 +39,6 @@ def sample_random_walk(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
         neighbors = list(graph.neighbors(current))
         if not neighbors:
             current = rng.choice(nodes)
+            visited.add(current)
+        else:
+            current = rng.choice(neighbors)

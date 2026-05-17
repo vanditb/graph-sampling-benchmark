@@ -15,3 +15,5 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - compares runtime and basic structure-preservation metrics
 - saves CSV tables and plots in `results/`
 
+## Methods
+### Graph types

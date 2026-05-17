@@ -17,3 +17,5 @@ def top_k_overlap(full_scores: dict, sampled_scores: dict, k: int = 10) -> tuple
     full_top = set(top_k_pagerank_nodes(full_scores, k))
     sampled_top = set(top_k_pagerank_nodes(sampled_scores, k))
     overlap = len(full_top & sampled_top)
+    return overlap, overlap / k * 100
+

@@ -35,3 +35,9 @@ def _pagerank(graph: nx.Graph) -> tuple[dict, float]:
     elapsed = time.perf_counter() - start
     return scores, elapsed
 
+
+def _connected_components(graph: nx.Graph) -> tuple[int, float]:
+    start = time.perf_counter()
+    count = nx.number_connected_components(graph)
+    elapsed = time.perf_counter() - start
+    return count, elapsed
