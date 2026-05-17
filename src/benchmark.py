@@ -30,3 +30,8 @@ SAMPLERS = {
 
 
 def _pagerank(graph: nx.Graph) -> tuple[dict, float]:
+    start = time.perf_counter()
+    scores = nx.pagerank(graph, alpha=0.85, tol=1e-6, max_iter=100)
+    elapsed = time.perf_counter() - start
+    return scores, elapsed
+

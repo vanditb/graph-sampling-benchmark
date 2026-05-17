@@ -35,3 +35,7 @@ def sample_random_walk(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
     steps = 0
     max_steps = max(target * 20, 100)
 
+    while len(visited) < target and steps < max_steps:
+        neighbors = list(graph.neighbors(current))
+        if not neighbors:
+            current = rng.choice(nodes)
