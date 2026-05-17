@@ -41,3 +41,8 @@ def _connected_components(graph: nx.Graph) -> tuple[int, float]:
     count = nx.number_connected_components(graph)
     elapsed = time.perf_counter() - start
     return count, elapsed
+
+
+def _seed_for(spec: GraphSpec, method: str, rate: float) -> int:
+    rate_key = int(rate * 100)
+    method_offset = {"random_node": 11, "random_edge": 22, "random_walk": 33}[method]

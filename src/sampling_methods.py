@@ -42,3 +42,7 @@ def sample_random_walk(graph: nx.Graph, rate: float, seed: int) -> nx.Graph:
             visited.add(current)
         else:
             current = rng.choice(neighbors)
+            visited.add(current)
+        steps += 1
+
+    return graph.subgraph(visited).copy()

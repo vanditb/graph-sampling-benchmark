@@ -19,3 +19,5 @@ def top_k_overlap(full_scores: dict, sampled_scores: dict, k: int = 10) -> tuple
     overlap = len(full_top & sampled_top)
     return overlap, overlap / k * 100
 
+
+def edge_retention_pct(full_graph: nx.Graph, sampled_graph: nx.Graph) -> float:
