@@ -19,3 +19,9 @@ from metrics import (
 )
 from sampling_methods import sample_random_edges, sample_random_nodes, sample_random_walk
 from visualize import create_plots
+
+
+SAMPLE_RATES = [0.25, 0.50, 0.75]
+SAMPLERS = {
+    "random_node": sample_random_nodes,
+    "random_edge": sample_random_edges,

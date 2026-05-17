@@ -12,3 +12,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - generates three kinds of graphs
 - samples them with three simple sampling methods
 - runs PageRank and connected components on the full graph and the sampled graph
+- compares runtime and basic structure-preservation metrics
