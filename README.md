@@ -22,3 +22,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - Watts-Strogatz small-world graph
 
 ### Sampling methods
+- Random node sampling

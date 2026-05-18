@@ -22,3 +22,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
     method_order = ["random_node", "random_edge", "random_walk"]
     algorithms = [
         (
+            "PageRank runtime",
+            "mean_pagerank_runtime_full_sec",
+            "mean_pagerank_runtime_sampled_sec",
+        ),
+        (

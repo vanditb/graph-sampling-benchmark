@@ -67,3 +67,9 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
     rows = []
     for method_name, sampler in SAMPLERS.items():
         for rate in SAMPLE_RATES:
+            sampled_graph = sampler(graph, rate, _seed_for(spec, method_name, rate))
+            sampled_pagerank_scores, sampled_pagerank_time = _pagerank(sampled_graph)
+            sampled_component_count, sampled_cc_time = _connected_components(sampled_graph)
+            overlap_count, overlap_pct = top_k_overlap(full_pagerank_scores, sampled_pagerank_scores, 10)
+
+            row = {
