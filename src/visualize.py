@@ -8,3 +8,7 @@ from matplotlib.lines import Line2D
 
 
 def _rate_label(rate: float) -> str:
+    return f"{int(rate * 100)}%"
+
+
+def create_plots(detailed: pd.DataFrame, summary: pd.DataFrame, plots_dir: Path) -> None:

@@ -51,3 +51,9 @@ def _seed_for(spec: GraphSpec, method: str, rate: float) -> int:
 
 def _base_graph_info(graph: nx.Graph) -> dict:
     return {
+        "original_node_count": graph.number_of_nodes(),
+        "original_edge_count": graph.number_of_edges(),
+        "original_density": nx.density(graph),
+    }
+
+

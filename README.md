@@ -19,3 +19,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 ### Graph types
 - Erdős-Rényi random graph
 - Barabási-Albert scale-free graph
+- Watts-Strogatz small-world graph
