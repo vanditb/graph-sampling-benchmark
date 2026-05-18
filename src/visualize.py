@@ -17,3 +17,8 @@ def create_plots(detailed: pd.DataFrame, summary: pd.DataFrame, plots_dir: Path)
     _structure_tradeoff_plot(summary, plots_dir / "structure_tradeoff.png")
 
 
+def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6), sharey=False)
+    method_order = ["random_node", "random_edge", "random_walk"]
+    algorithms = [
+        (

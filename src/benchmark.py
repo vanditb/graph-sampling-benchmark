@@ -62,3 +62,8 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
     full_pagerank_scores, full_pagerank_time = _pagerank(graph)
     full_component_count, full_cc_time = _connected_components(graph)
     full_top10 = top_k_pagerank_nodes(full_pagerank_scores, 10)
+    base_info = _base_graph_info(graph)
+
+    rows = []
+    for method_name, sampler in SAMPLERS.items():
+        for rate in SAMPLE_RATES:

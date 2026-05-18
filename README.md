@@ -21,3 +21,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - Barabási-Albert scale-free graph
 - Watts-Strogatz small-world graph
 
+### Sampling methods

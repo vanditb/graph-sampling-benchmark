@@ -28,3 +28,5 @@ def edge_retention_pct(full_graph: nx.Graph, sampled_graph: nx.Graph) -> float:
 def density_change_pct(full_graph: nx.Graph, sampled_graph: nx.Graph) -> float:
     full_density = nx.density(full_graph)
     if full_density == 0:
+        return 0.0
+    return (nx.density(sampled_graph) - full_density) / full_density * 100
