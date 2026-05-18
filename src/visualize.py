@@ -27,3 +27,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
             "mean_pagerank_runtime_sampled_sec",
         ),
         (
+            "Connected components runtime",
+            "mean_cc_runtime_full_sec",
+            "mean_cc_runtime_sampled_sec",
+        ),
+    ]

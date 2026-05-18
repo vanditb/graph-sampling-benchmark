@@ -32,3 +32,5 @@ def density_change_pct(full_graph: nx.Graph, sampled_graph: nx.Graph) -> float:
     return (nx.density(sampled_graph) - full_density) / full_density * 100
 
 
+def component_count_diff(full_graph: nx.Graph, sampled_graph: nx.Graph) -> int:
+    return nx.number_connected_components(sampled_graph) - nx.number_connected_components(full_graph)

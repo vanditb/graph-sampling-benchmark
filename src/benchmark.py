@@ -73,3 +73,8 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
             overlap_count, overlap_pct = top_k_overlap(full_pagerank_scores, sampled_pagerank_scores, 10)
 
             row = {
+                **asdict(spec),
+                **base_info,
+                "sampling_method": method_name,
+                "sampling_rate": rate,
+                "sampled_node_count": sampled_graph.number_of_nodes(),
