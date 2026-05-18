@@ -21,3 +21,5 @@ def top_k_overlap(full_scores: dict, sampled_scores: dict, k: int = 10) -> tuple
 
 
 def edge_retention_pct(full_graph: nx.Graph, sampled_graph: nx.Graph) -> float:
+    full_edges = max(full_graph.number_of_edges(), 1)
+    return sampled_graph.number_of_edges() / full_edges * 100

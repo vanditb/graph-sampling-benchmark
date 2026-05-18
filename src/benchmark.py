@@ -46,3 +46,8 @@ def _connected_components(graph: nx.Graph) -> tuple[int, float]:
 def _seed_for(spec: GraphSpec, method: str, rate: float) -> int:
     rate_key = int(rate * 100)
     method_offset = {"random_node": 11, "random_edge": 22, "random_walk": 33}[method]
+    return spec.seed * 1000 + rate_key + method_offset
+
+
+def _base_graph_info(graph: nx.Graph) -> dict:
+    return {
