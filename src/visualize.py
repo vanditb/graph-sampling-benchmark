@@ -12,3 +12,8 @@ def _rate_label(rate: float) -> str:
 
 
 def create_plots(detailed: pd.DataFrame, summary: pd.DataFrame, plots_dir: Path) -> None:
+    _runtime_comparison_plot(summary, plots_dir / "runtime_comparison.png")
+    _pagerank_overlap_plot(summary, plots_dir / "pagerank_overlap.png")
+    _structure_tradeoff_plot(summary, plots_dir / "structure_tradeoff.png")
+
+
