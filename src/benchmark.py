@@ -105,3 +105,8 @@ def _summary_table(df: pd.DataFrame) -> pd.DataFrame:
             mean_original_edges=("original_edge_count", "mean"),
             mean_sampled_nodes=("sampled_node_count", "mean"),
             mean_sampled_edges=("sampled_edge_count", "mean"),
+            mean_pagerank_runtime_full_sec=("pagerank_runtime_full_sec", "mean"),
+            mean_pagerank_runtime_sampled_sec=("pagerank_runtime_sampled_sec", "mean"),
+            mean_cc_runtime_full_sec=("connected_components_runtime_full_sec", "mean"),
+            mean_cc_runtime_sampled_sec=("connected_components_runtime_sampled_sec", "mean"),
+            mean_pagerank_top10_overlap_pct=("pagerank_top10_overlap_pct", "mean"),

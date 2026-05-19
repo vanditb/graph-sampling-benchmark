@@ -56,3 +56,7 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
     fig.tight_layout()
     fig.savefig(output_path, dpi=200)
     plt.close(fig)
+
+
+def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
+    methods = ["random_node", "random_edge", "random_walk"]
