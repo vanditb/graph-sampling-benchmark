@@ -110,3 +110,8 @@ def _summary_table(df: pd.DataFrame) -> pd.DataFrame:
             mean_cc_runtime_full_sec=("connected_components_runtime_full_sec", "mean"),
             mean_cc_runtime_sampled_sec=("connected_components_runtime_sampled_sec", "mean"),
             mean_pagerank_top10_overlap_pct=("pagerank_top10_overlap_pct", "mean"),
+            mean_edge_retention_pct=("edge_retention_pct", "mean"),
+            mean_density_change_pct=("density_change_pct", "mean"),
+            mean_connected_component_count_diff=("connected_component_count_diff", "mean"),
+            mean_pagerank_runtime_saved_pct=("pagerank_runtime_saved_pct", "mean"),
+            mean_cc_runtime_saved_pct=("cc_runtime_saved_pct", "mean"),

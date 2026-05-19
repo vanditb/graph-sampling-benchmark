@@ -60,3 +60,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
 
 def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
     methods = ["random_node", "random_edge", "random_walk"]
+    rates = [0.25, 0.50, 0.75]
+
+    heat = (
+        summary.groupby(["sampling_method", "sampling_rate"], as_index=False)["mean_pagerank_top10_overlap_pct"]
+        .mean()
