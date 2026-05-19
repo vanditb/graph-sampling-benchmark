@@ -94,3 +94,8 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
                 "sampled_connected_component_count": sampled_component_count,
             }
             rows.append(row)
+    return rows
+
+
+def _summary_table(df: pd.DataFrame) -> pd.DataFrame:
+    grouped = (

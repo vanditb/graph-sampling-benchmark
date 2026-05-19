@@ -46,3 +46,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
         width = 0.38
         ax.bar([i - width / 2 for i in x], plot_df[full_col], width=width, label="Full graph")
         ax.bar([i + width / 2 for i in x], plot_df[sampled_col], width=width, label="Sampled graph")
+        ax.set_title(title)
+        ax.set_xticks(list(x))
+        ax.set_xticklabels(groups, rotation=45, ha="right")
+        ax.set_ylabel("Seconds")
+        ax.legend(frameon=False)

@@ -28,3 +28,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 
 ### Algorithms
 - PageRank
+- Connected components
