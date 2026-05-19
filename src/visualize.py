@@ -41,3 +41,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
         plot_df["sampling_method"] = pd.Categorical(plot_df["sampling_method"], categories=method_order, ordered=True)
         plot_df = plot_df.sort_values(["sampling_method", "sampling_rate"])
         plot_df["group"] = plot_df["sampling_method"].astype(str) + " / " + plot_df["sampling_rate"].map(_rate_label)
+        groups = plot_df["group"].tolist()
+        x = range(len(groups))
+        width = 0.38
+        ax.bar([i - width / 2 for i in x], plot_df[full_col], width=width, label="Full graph")
+        ax.bar([i + width / 2 for i in x], plot_df[sampled_col], width=width, label="Sampled graph")

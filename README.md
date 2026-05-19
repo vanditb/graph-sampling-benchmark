@@ -26,3 +26,5 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - Random edge sampling
 - Random walk sampling
 
+### Algorithms
+- PageRank

@@ -89,3 +89,8 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
                 "density_change_pct": density_change_pct(graph, sampled_graph),
                 "connected_component_count_diff": sampled_component_count - full_component_count,
                 "pagerank_runtime_saved_pct": time_saved_pct(full_pagerank_time, sampled_pagerank_time),
+                "cc_runtime_saved_pct": time_saved_pct(full_cc_time, sampled_cc_time),
+                "full_connected_component_count": full_component_count,
+                "sampled_connected_component_count": sampled_component_count,
+            }
+            rows.append(row)
