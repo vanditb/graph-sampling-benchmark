@@ -36,3 +36,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
     for ax, (title, full_col, sampled_col) in zip(axes, algorithms):
         plot_df = (
             summary.groupby(["sampling_method", "sampling_rate"], as_index=False)
+            .agg({full_col: "mean", sampled_col: "mean"})
+        )
+        plot_df["sampling_method"] = pd.Categorical(plot_df["sampling_method"], categories=method_order, ordered=True)
+        plot_df = plot_df.sort_values(["sampling_method", "sampling_rate"])
+        plot_df["group"] = plot_df["sampling_method"].astype(str) + " / " + plot_df["sampling_rate"].map(_rate_label)
