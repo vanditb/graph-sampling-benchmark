@@ -32,3 +32,7 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
             "mean_cc_runtime_sampled_sec",
         ),
     ]
+
+    for ax, (title, full_col, sampled_col) in zip(axes, algorithms):
+        plot_df = (
+            summary.groupby(["sampling_method", "sampling_rate"], as_index=False)

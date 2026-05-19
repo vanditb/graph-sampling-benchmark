@@ -78,3 +78,8 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
                 "sampling_method": method_name,
                 "sampling_rate": rate,
                 "sampled_node_count": sampled_graph.number_of_nodes(),
+                "sampled_edge_count": sampled_graph.number_of_edges(),
+                "pagerank_runtime_full_sec": full_pagerank_time,
+                "pagerank_runtime_sampled_sec": sampled_pagerank_time,
+                "connected_components_runtime_full_sec": full_cc_time,
+                "connected_components_runtime_sampled_sec": sampled_cc_time,

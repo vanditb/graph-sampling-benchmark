@@ -24,3 +24,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 ### Sampling methods
 - Random node sampling
 - Random edge sampling
+- Random walk sampling
