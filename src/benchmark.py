@@ -99,3 +99,9 @@ def _run_for_graph(spec: GraphSpec) -> list[dict]:
 
 def _summary_table(df: pd.DataFrame) -> pd.DataFrame:
     grouped = (
+        df.groupby(["graph_type", "sampling_method", "sampling_rate"], as_index=False)
+        .agg(
+            mean_original_nodes=("original_node_count", "mean"),
+            mean_original_edges=("original_edge_count", "mean"),
+            mean_sampled_nodes=("sampled_node_count", "mean"),
+            mean_sampled_edges=("sampled_edge_count", "mean"),

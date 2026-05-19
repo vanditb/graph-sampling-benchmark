@@ -51,3 +51,8 @@ def _runtime_comparison_plot(summary: pd.DataFrame, output_path: Path) -> None:
         ax.set_xticklabels(groups, rotation=45, ha="right")
         ax.set_ylabel("Seconds")
         ax.legend(frameon=False)
+
+    fig.suptitle("Runtime comparison by sampling method and rate")
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=200)
+    plt.close(fig)
