@@ -37,3 +37,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - top-10 PageRank overlap
 - edge retention percentage
 - density change
+- connected component count difference

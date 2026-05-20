@@ -89,3 +89,8 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
     fig.colorbar(im, ax=ax, label="Overlap %")
     fig.tight_layout()
     fig.savefig(output_path, dpi=200)
+    plt.close(fig)
+
+
+def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
