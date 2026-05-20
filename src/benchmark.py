@@ -126,3 +126,8 @@ def run_all_benchmarks(root: Path) -> None:
     plots_dir = results_dir / "plots"
     results_dir.mkdir(exist_ok=True)
     plots_dir.mkdir(exist_ok=True)
+
+    rows = []
+    for spec in graph_specs():
+        rows.extend(_run_for_graph(spec))
+

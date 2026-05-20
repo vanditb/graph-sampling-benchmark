@@ -75,3 +75,8 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
     im = ax.imshow(heat.values, cmap="Blues", aspect="auto")
     ax.set_xticks(range(len(rates)))
     ax.set_xticklabels([_rate_label(r) for r in rates])
+    ax.set_yticks(range(len(methods)))
+    ax.set_yticklabels(["Random node", "Random edge", "Random walk"])
+    ax.set_xlabel("Sampling rate")
+    ax.set_ylabel("Sampling method")
+    ax.set_title("Top-10 PageRank overlap")
