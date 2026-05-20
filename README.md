@@ -32,3 +32,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 
 ### Metrics
 - original and sampled node/edge counts
+- PageRank runtime on the full graph and sampled graph

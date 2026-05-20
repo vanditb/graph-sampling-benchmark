@@ -115,3 +115,9 @@ def _summary_table(df: pd.DataFrame) -> pd.DataFrame:
             mean_connected_component_count_diff=("connected_component_count_diff", "mean"),
             mean_pagerank_runtime_saved_pct=("pagerank_runtime_saved_pct", "mean"),
             mean_cc_runtime_saved_pct=("cc_runtime_saved_pct", "mean"),
+        )
+        .sort_values(["graph_type", "sampling_method", "sampling_rate"])
+    )
+    return grouped
+
+

@@ -65,3 +65,8 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
     heat = (
         summary.groupby(["sampling_method", "sampling_rate"], as_index=False)["mean_pagerank_top10_overlap_pct"]
         .mean()
+        .pivot(index="sampling_method", columns="sampling_rate", values="mean_pagerank_top10_overlap_pct")
+        .reindex(methods)
+    )
+
+    heat = heat[rates]
