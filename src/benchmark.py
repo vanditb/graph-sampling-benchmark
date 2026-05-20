@@ -137,3 +137,8 @@ def run_all_benchmarks(root: Path) -> None:
 
     summary = _summary_table(detailed)
     summary.to_csv(results_dir / "summary_results.csv", index=False)
+
+    create_plots(detailed, summary, plots_dir)
+
+    print(f"Saved {len(detailed)} detailed rows to {results_dir / 'runtime_results.csv'}")
+    print(f"Saved {len(summary)} summary rows to {results_dir / 'summary_results.csv'}")

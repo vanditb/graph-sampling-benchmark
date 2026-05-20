@@ -85,3 +85,7 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
         for j in range(heat.shape[1]):
             value = heat.values[i, j]
             ax.text(j, i, f"{value:.1f}%", ha="center", va="center", color="black")
+
+    fig.colorbar(im, ax=ax, label="Overlap %")
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=200)
