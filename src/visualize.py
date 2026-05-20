@@ -70,3 +70,8 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
     )
 
     heat = heat[rates]
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    im = ax.imshow(heat.values, cmap="Blues", aspect="auto")
+    ax.set_xticks(range(len(rates)))
+    ax.set_xticklabels([_rate_label(r) for r in rates])

@@ -121,3 +121,8 @@ def _summary_table(df: pd.DataFrame) -> pd.DataFrame:
     return grouped
 
 
+def run_all_benchmarks(root: Path) -> None:
+    results_dir = root / "results"
+    plots_dir = results_dir / "plots"
+    results_dir.mkdir(exist_ok=True)
+    plots_dir.mkdir(exist_ok=True)
