@@ -131,3 +131,9 @@ def run_all_benchmarks(root: Path) -> None:
     for spec in graph_specs():
         rows.extend(_run_for_graph(spec))
 
+    detailed = pd.DataFrame(rows)
+    detailed = detailed.sort_values(["graph_type", "original_node_count", "sampling_method", "sampling_rate"])
+    detailed.to_csv(results_dir / "runtime_results.csv", index=False)
+
+    summary = _summary_table(detailed)
+    summary.to_csv(results_dir / "summary_results.csv", index=False)

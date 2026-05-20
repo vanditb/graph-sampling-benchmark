@@ -80,3 +80,8 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
     ax.set_xlabel("Sampling rate")
     ax.set_ylabel("Sampling method")
     ax.set_title("Top-10 PageRank overlap")
+
+    for i in range(heat.shape[0]):
+        for j in range(heat.shape[1]):
+            value = heat.values[i, j]
+            ax.text(j, i, f"{value:.1f}%", ha="center", va="center", color="black")

@@ -35,3 +35,4 @@ I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His l
 - PageRank runtime on the full graph and sampled graph
 - connected components runtime on the full graph and sampled graph
 - top-10 PageRank overlap
+- edge retention percentage
