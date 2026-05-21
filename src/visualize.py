@@ -123,3 +123,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
                 row[metric_col],
                 color=colors[row["sampling_method"]],
                 marker=markers[row["sampling_rate"]],
+                s=70,
+                alpha=0.85,
+            )
+        ax.set_xlabel("Average runtime saved %")
+        ax.set_ylabel(y_label)

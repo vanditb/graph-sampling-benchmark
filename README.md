@@ -45,3 +45,4 @@ The graph sizes in this project are 1,000, 3,000, and 5,000 nodes. I kept them s
 These are the main patterns I saw in my run:
 
 - Lower sampling rates usually saved more time, but they also lost more structure.
+- Random walk sampling was the best balance overall in this run. On average it saved about 59% of PageRank runtime and about 56% of connected components runtime, while keeping about 44% top-10 PageRank overlap.
