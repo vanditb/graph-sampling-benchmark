@@ -99,3 +99,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
     method_labels = {"random_node": "Random node", "random_edge": "Random edge", "random_walk": "Random walk"}
 
     plots = [
+        ("mean_pagerank_top10_overlap_pct", "PageRank overlap %"),
+        ("mean_edge_retention_pct", "Edge retention %"),
+    ]
+
+    scatter_df = (
