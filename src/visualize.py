@@ -109,3 +109,7 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
             mean_pagerank_runtime_saved_pct=("mean_pagerank_runtime_saved_pct", "mean"),
             mean_pagerank_top10_overlap_pct=("mean_pagerank_top10_overlap_pct", "mean"),
             mean_edge_retention_pct=("mean_edge_retention_pct", "mean"),
+        )
+    )
+    scatter_df["sampling_method"] = pd.Categorical(
+        scatter_df["sampling_method"], categories=["random_node", "random_edge", "random_walk"], ordered=True
