@@ -94,3 +94,8 @@ def _pagerank_overlap_plot(summary: pd.DataFrame, output_path: Path) -> None:
 
 def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    colors = {"random_node": "#4C78A8", "random_edge": "#F58518", "random_walk": "#54A24B"}
+    markers = {0.25: "o", 0.50: "s", 0.75: "^"}
+    method_labels = {"random_node": "Random node", "random_edge": "Random edge", "random_walk": "Random walk"}
+
+    plots = [
