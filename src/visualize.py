@@ -118,3 +118,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
 
     for ax, (metric_col, y_label) in zip(axes, plots):
         for _, row in scatter_df.iterrows():
+            ax.scatter(
+                row["mean_pagerank_runtime_saved_pct"],
+                row[metric_col],
+                color=colors[row["sampling_method"]],
+                marker=markers[row["sampling_rate"]],
