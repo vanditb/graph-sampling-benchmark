@@ -113,3 +113,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
     )
     scatter_df["sampling_method"] = pd.Categorical(
         scatter_df["sampling_method"], categories=["random_node", "random_edge", "random_walk"], ordered=True
+    )
+    scatter_df = scatter_df.sort_values(["sampling_method", "sampling_rate"])
+
+    for ax, (metric_col, y_label) in zip(axes, plots):
+        for _, row in scatter_df.iterrows():
