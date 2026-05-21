@@ -104,3 +104,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
     ]
 
     scatter_df = (
+        summary.groupby(["sampling_method", "sampling_rate"], as_index=False)
+        .agg(
+            mean_pagerank_runtime_saved_pct=("mean_pagerank_runtime_saved_pct", "mean"),
+            mean_pagerank_top10_overlap_pct=("mean_pagerank_top10_overlap_pct", "mean"),
+            mean_edge_retention_pct=("mean_edge_retention_pct", "mean"),
