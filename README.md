@@ -50,3 +50,5 @@ These are the main patterns I saw in my run:
 - Random edge sampling kept more edges by design, but it did not always give the best runtime savings.
 - Barabási-Albert graphs had higher PageRank top-10 overlap than the other graph types in this run, which makes sense because hub nodes matter a lot in scale-free graphs.
 
+I would not treat these numbers as universal. They are just one small benchmark run on synthetic graphs.
+
