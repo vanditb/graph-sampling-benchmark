@@ -142,3 +142,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
         )
 
     axes[0].legend(handles=handles, title="Method", frameon=False, loc="lower right")
+    axes[1].legend(handles=rate_handles, title="Rate", frameon=False, loc="lower right")
+    fig.suptitle("Tradeoff between runtime saved and graph structure")
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=200)
+    plt.close(fig)
