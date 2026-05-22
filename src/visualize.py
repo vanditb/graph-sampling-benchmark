@@ -128,3 +128,8 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
             )
         ax.set_xlabel("Average runtime saved %")
         ax.set_ylabel(y_label)
+        ax.grid(True, alpha=0.2)
+
+    handles = []
+    for method, color in colors.items():
+        handles.append(
