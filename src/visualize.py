@@ -133,3 +133,7 @@ def _structure_tradeoff_plot(summary: pd.DataFrame, output_path: Path) -> None:
     handles = []
     for method, color in colors.items():
         handles.append(
+            Line2D([0], [0], marker="o", color="w", label=method_labels[method], markerfacecolor=color, markersize=9)
+        )
+    rate_handles = []
+    for rate, marker in markers.items():

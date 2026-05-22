@@ -47,3 +47,4 @@ These are the main patterns I saw in my run:
 - Lower sampling rates usually saved more time, but they also lost more structure.
 - Random walk sampling was the best balance overall in this run. On average it saved about 59% of PageRank runtime and about 56% of connected components runtime, while keeping about 44% top-10 PageRank overlap.
 - Random node sampling also saved a lot of time, but it usually had lower PageRank overlap than random walk.
+- Random edge sampling kept more edges by design, but it did not always give the best runtime savings.
