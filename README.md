@@ -53,3 +53,4 @@ These are the main patterns I saw in my run:
 I would not treat these numbers as universal. They are just one small benchmark run on synthetic graphs.
 
 ## Limitations
+- This is small-scale and CPU-based.
