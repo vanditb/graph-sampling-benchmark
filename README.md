@@ -56,3 +56,4 @@ I would not treat these numbers as universal. They are just one small benchmark 
 - This is small-scale and CPU-based.
 - It uses NetworkX, not an optimized graph-processing system.
 - The graphs are synthetic and simpler than many real-world datasets.
+- The goal is to practice graph analytics evaluation, not to reproduce high-performance systems research.
