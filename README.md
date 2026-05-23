@@ -55,3 +55,4 @@ I would not treat these numbers as universal. They are just one small benchmark 
 ## Limitations
 - This is small-scale and CPU-based.
 - It uses NetworkX, not an optimized graph-processing system.
+- The graphs are synthetic and simpler than many real-world datasets.
