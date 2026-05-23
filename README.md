@@ -57,3 +57,4 @@ I would not treat these numbers as universal. They are just one small benchmark 
 - It uses NetworkX, not an optimized graph-processing system.
 - The graphs are synthetic and simpler than many real-world datasets.
 - The goal is to practice graph analytics evaluation, not to reproduce high-performance systems research.
+- Some sampled graphs are not always faster in every case, especially with NetworkX overhead, which is part of why the benchmark is useful.
