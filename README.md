@@ -60,3 +60,4 @@ I would not treat these numbers as universal. They are just one small benchmark 
 - Some sampled graphs are not always faster in every case, especially with NetworkX overhead, which is part of why the benchmark is useful.
 
 ## How to Run
+```bash
