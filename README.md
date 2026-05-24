@@ -61,3 +61,5 @@ I would not treat these numbers as universal. They are just one small benchmark 
 
 ## How to Run
 ```bash
+pip install -r requirements.txt
+python run_benchmark.py
