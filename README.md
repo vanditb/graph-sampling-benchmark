@@ -65,3 +65,4 @@ pip install -r requirements.txt
 python run_benchmark.py
 ```
 
+If `python` does not work on your machine, use `python3 run_benchmark.py`.
