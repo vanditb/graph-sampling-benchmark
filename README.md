@@ -70,3 +70,4 @@ If `python` does not work on your machine, use `python3 run_benchmark.py`.
 ## Output Files
 After running the script, the project saves:
 - `results/runtime_results.csv`
+- `results/summary_results.csv`
