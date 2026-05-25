@@ -71,3 +71,4 @@ If `python` does not work on your machine, use `python3 run_benchmark.py`.
 After running the script, the project saves:
 - `results/runtime_results.csv`
 - `results/summary_results.csv`
+- `results/plots/runtime_comparison.png`
