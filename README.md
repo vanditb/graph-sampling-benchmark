@@ -76,3 +76,4 @@ After running the script, the project saves:
 - `results/plots/structure_tradeoff.png`
 
 ## What I Learned
+- I learned how graph structure affects algorithm results.
