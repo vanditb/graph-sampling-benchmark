@@ -73,3 +73,5 @@ After running the script, the project saves:
 - `results/summary_results.csv`
 - `results/plots/runtime_comparison.png`
 - `results/plots/pagerank_overlap.png`
+- `results/plots/structure_tradeoff.png`
+
