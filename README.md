@@ -78,3 +78,4 @@ After running the script, the project saves:
 ## What I Learned
 - I learned how graph structure affects algorithm results.
 - I learned that making a graph smaller is not automatically better if important structure is lost.
+- I learned how to organize benchmark outputs into tables and plots.
