@@ -3,7 +3,7 @@
 Runtime vs Structure Preservation in Graph Analysis
 
 ## Why I Built This
-I built this after reaching out to Professor Hang Liu at Rutgers HPDA Lab. His lab works on graph analytics and high-performance data systems, and he suggested I build something concrete so he could evaluate my fit for research. I wanted to make a small project that connects to graph analytics while still matching my current Python and data analysis background.
+I built this project after learning more about Professor Hang Liu’s HPDA Lab at Rutgers and its work in graph analytics and high-performance data systems. I wanted to create something concrete that connects to the lab’s research interests while also building on my current background in Python, data analysis, and practical problem-solving.
 
 ## Project Question
 "When we sample a graph to make analysis faster, how much useful graph structure do we lose?"
